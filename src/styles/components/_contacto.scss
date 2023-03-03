@@ -1,0 +1,152 @@
+.contacto-container {
+    background-image: url("../../image/contacto.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    padding: 50px 0;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: rgba(29, 29, 29, 0.722);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .container {
+        max-width: 700px;
+        padding: 50px 50px 25px;
+        border-radius: 30px;
+
+        @media(max-width: 500px) {
+            padding: 20px;
+        }
+
+        .titulos {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+
+            h2 {
+                color: #fff;
+            }
+
+        }
+
+        .formulario {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+
+            input,
+            textarea {
+                margin-top: 20px;
+                background: rgba(255, 255, 255, 0.724);
+                padding: 12px 20px;
+                text-decoration: none;
+                border: none;
+                transition: 0.7s;
+                outline: none;
+                border-radius: 5px;
+
+                &:hover {
+                    background: rgb(255, 255, 255);
+                }
+
+                &::placeholder {
+                    color: rgb(0, 0, 0);
+                    font-weight: 600;
+                }
+            }
+
+            .error {
+                color: rgb(255, 0, 0);
+                font-weight: 600;
+                margin-top: 5px;
+                font-size: 14px;
+            }
+
+            textarea {
+                height: 200px;
+                resize: none;
+            }
+
+            button {
+                display: block;
+                background: $Cyan;
+                border: solid 2px $Cyan;
+                margin: 20px auto;
+                border-radius: 20px;
+                padding: 10px 96px;
+                font-weight: 700;
+                color: #fff;
+
+                @media(max-width: 400px) {
+                    padding: 10px 48px;
+                }
+            }
+
+            .exito {
+                font-weight: 600;
+                color: rgb(15, 208, 15);
+                margin: auto;
+            }
+        }
+
+
+    }
+
+    .redes {
+        width: 50%;
+        margin: auto;
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        font-size: 25px;
+        justify-content: space-between;
+
+        @media(max-width: 600px) {
+            width: 100%;
+        }
+
+        .container-icon {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $White;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+
+            &.instagram {
+                background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+                ;
+            }
+
+            &.whatsapp {
+                background: #1ACC3E;
+            }
+
+
+            i {
+                margin-top: 1px;
+                margin-left: 1px;
+                color: #000000;
+
+                &.linkedin {
+                    color: #0071AE;
+                }
+            }
+        }
+
+    }
+}
