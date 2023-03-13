@@ -7,6 +7,9 @@
     background-attachment: fixed;
     padding: 50px 0;
 
+    @media(max-width: 600px) {
+        background-image: url("../../image/contacto-movil.jpg");
+    }
 
     &::before {
         content: "";
@@ -138,8 +141,6 @@
 
 
             i {
-                margin-top: 1px;
-                margin-left: 1px;
                 color: #000000;
 
                 &.linkedin {

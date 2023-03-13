@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import axios from "axios";
 
 function Contacto({ lengua }) {
   const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
@@ -31,7 +32,6 @@ function Contacto({ lengua }) {
         <Formik
           initialValues={{
             nombre: "",
-            telefono: "",
             email: "",
             textarea: "",
           }}
@@ -86,22 +86,21 @@ function Contacto({ lengua }) {
             return errores;
           }}
           onSubmit={async (valores, { resetForm }) => {
-            // const url = "http://localhost:3149/mail";
-            // const data = {
-            //   nombre: valores.nombre,
-            //   telefono: valores.telefono,
-            //   correo: valores.email,
-            //   consulta: valores.textarea,
-            // };
+            const url = "https://franciscovitar.online/mail";
+            const data = {
+              nombre: valores.nombre,
+              correo: valores.email,
+              consulta: valores.textarea,
+            };
 
-            // await axios
-            //   .post(url, data)
-            //   .then(function (response) {
-            //     console.log("success");
-            //   })
-            //   .catch(function (error) {
-            //     console.log(error);
-            //   });
+            await axios
+              .post(url, data)
+              .then(function (response) {
+                console.log("success");
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
             resetForm();
             cambiarFormularioEnviado(true);
             setTimeout(() => cambiarFormularioEnviado(false), 5000);
@@ -170,7 +169,7 @@ function Contacto({ lengua }) {
             </a>
           </motion.div>
           <motion.div whileHover={{ scale: 1.1 }} className="container-icon">
-            <a href="https://github.com/franvitar15">
+            <a href="https://github.com/franciscovitar">
               <i class="bi bi-github "></i>
             </a>
           </motion.div>

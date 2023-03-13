@@ -186,7 +186,7 @@ function Portafolio({ lengua }) {
                   Realicé una página web, la cual trata sobre un estudio
                   contable. Intenté que quede bien informativa, estéticamente
                   agradable para el usuario y adaptable a cualquier dispositivo
-                  movil.
+                  móvil.
                 </p>
               )}
             </motion.p>
@@ -208,6 +208,172 @@ function Portafolio({ lengua }) {
         </div>
 
         {/* TRES */}
+        <div className="galeria">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="imagen"
+          >
+            <div className="imagen-zoom">
+              <motion.img
+                initial={{ scale: 1.2 }}
+                whileInView={{
+                  scale: 1,
+                  transition: { duration: 3, ease: [1, 1, 1, 1] },
+                }}
+                viewport={{ once: true }}
+                src={calculadora}
+              />
+            </div>
+          </motion.div>
+
+          <div className="texto bg-light">
+            <motion.h3
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: 0.2 },
+              }}
+            >
+              Estudio Jurídico Mancini Abogados
+            </motion.h3>
+            <motion.div
+              className="line mt-1 mb-3"
+              viewport={{ once: true }}
+              initial={{ width: 0 }}
+              whileInView={{
+                width: "10%",
+                transition: { duration: 1, delay: 0.4 },
+              }}
+            >
+              {" "}
+            </motion.div>
+            <motion.p
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: 0.3 },
+              }}
+            >
+              {lengua ? (
+                <p>
+                  Page that we made with a colleague, about a law firm, where we
+                  tried to make it look modern and informative. This project put
+                  our teamwork skills to the test.
+                </p>
+              ) : (
+                <p>
+                  Página que realizamos con un compañero, sobre un estudio de
+                  abogados, donde intentamos que quede bien moderna e
+                  informativa. Este proyecto logró poner a prueba nuestras
+                  habilidades de trabajo en equipo.
+                </p>
+              )}
+            </motion.p>
+
+            <motion.a
+              href="https://manciniabogados.website//"
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: 0.7 },
+              }}
+              className="consultar"
+            >
+              {lengua ? "Go to the page!!" : "Ve a la página!!"}
+            </motion.a>
+          </div>
+        </div>
+        <div className="galeria">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="imagen"
+          >
+            <div className="imagen-zoom">
+              <motion.img
+                initial={{ scale: 1.2 }}
+                whileInView={{
+                  scale: 1,
+                  transition: { duration: 3, ease: [1, 1, 1, 1] },
+                }}
+                viewport={{ once: true }}
+                src={Countries}
+              />
+            </div>
+          </motion.div>
+
+          <div className="texto bg-light">
+            <motion.h3
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: 0.2 },
+              }}
+            >
+              Gustavo Hernandez Studio
+            </motion.h3>
+            <motion.div
+              className="line mt-1 mb-3"
+              viewport={{ once: true }}
+              initial={{ width: 0 }}
+              whileInView={{
+                width: "10%",
+                transition: { duration: 1, delay: 0.4 },
+              }}
+            >
+              {" "}
+            </motion.div>
+            <motion.p
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: 0.3 },
+              }}
+            >
+              {lengua ? (
+                <p>
+                  Another page that I made together with a colleague, where we
+                  tested our skills in css flexbox, creating a website about
+                  photographs.
+                </p>
+              ) : (
+                <p>
+                  Otra página que realice en conjunto con un compañero, donde
+                  pusimos a prueba nuestras habilidades en css flexbox, creando
+                  un sitio web sobre fotografías.
+                </p>
+              )}
+            </motion.p>
+
+            <motion.a
+              href="https://fotografia.ga"
+              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: 0.7 },
+              }}
+              className="consultar"
+            >
+              {lengua ? "Go to the page!!" : "Ve a la página!!"}
+            </motion.a>
+          </div>
+        </div>
+        {/* CUATRO */}
         <div className="galeria">
           <motion.div
             initial={{ opacity: 0 }}
@@ -269,16 +435,16 @@ function Portafolio({ lengua }) {
                 </p>
               ) : (
                 <p>
-                  Este es una desafrio de la página Front-End Mentor, donde
-                  habia que realizar una applicación ToDo, para poder crear una
-                  lista de tareas, donde se pueden agregar, eliminar, completar
-                  y filtrar tareas a tu gusto.
+                  Este es un desafío de la página Front-End Mentor, donde había
+                  que realizar una aplicación ToDo, para poder crear una lista
+                  de tareas, donde se pueden agregar, eliminar, completar y
+                  filtrar tareas a tu gusto.
                 </p>
               )}
             </motion.p>
 
             <motion.a
-              href="#contacto"
+              href="https://franciscovitar.github.io/todo-app/"
               viewport={{ once: true }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{
@@ -293,7 +459,7 @@ function Portafolio({ lengua }) {
           </div>
         </div>
 
-        {/* CUATRO */}
+        {/* CINCO */}
 
         <div className="galeria">
           <motion.div
@@ -358,7 +524,7 @@ function Portafolio({ lengua }) {
                 <p>
                   Este es otro desafío de Front-End, donde se busca simular un
                   E-commerce, en el cual se pueden agregar y quitar productos a
-                  tu carrito. También podes observar imágenes desde distintos
+                  tu carrito. También podés observar imágenes desde distintos
                   ángulos del producto presentado. A su vez es totalmente
                   responsive, apta para todo tamaño de pantalla.
                 </p>
@@ -366,7 +532,7 @@ function Portafolio({ lengua }) {
             </motion.p>
 
             <motion.a
-              href="https://franvitar15.github.io/e-commerce/"
+              href="https://franciscovitar.github.io/e-commerce/"
               viewport={{ once: true }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{
@@ -381,177 +547,7 @@ function Portafolio({ lengua }) {
           </div>
         </div>
 
-        {/* CINCO */}
-
-        <div className="galeria">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="imagen"
-          >
-            <div className="imagen-zoom">
-              <motion.img
-                initial={{ scale: 1.2 }}
-                whileInView={{
-                  scale: 1,
-                  transition: { duration: 3, ease: [1, 1, 1, 1] },
-                }}
-                viewport={{ once: true }}
-                src={Countries}
-              />
-            </div>
-          </motion.div>
-
-          <div className="texto bg-light">
-            <motion.h3
-              viewport={{ once: true }}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.5, delay: 0.2 },
-              }}
-            >
-              Rest Country-Api
-            </motion.h3>
-            <motion.div
-              className="line mt-1 mb-3"
-              viewport={{ once: true }}
-              initial={{ width: 0 }}
-              whileInView={{
-                width: "10%",
-                transition: { duration: 1, delay: 0.4 },
-              }}
-            >
-              {" "}
-            </motion.div>
-            <motion.p
-              viewport={{ once: true }}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.5, delay: 0.3 },
-              }}
-            >
-              {lengua ? (
-                <p>
-                  Front-End mentor challenge, where I used an Api of countries,
-                  to show each one on screen, you can also filter each country
-                  by its name or continent, where by clicking on the country,
-                  opens a new window with more data of it.
-                </p>
-              ) : (
-                <p>
-                  Desafío Front-End mentor, donde utlicé una Api de paises, para
-                  poder mostrar a cada uno en pantalla, también podes filtrar
-                  cada país por su nombre o continente, donde al presionar en el
-                  país, se abre una nueva ventana con más datos del mismo.
-                </p>
-              )}
-            </motion.p>
-
-            <motion.a
-              href="#contacto"
-              viewport={{ once: true }}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.5, delay: 0.7 },
-              }}
-              className="consultar"
-            >
-              {lengua ? "Go to the page!!" : "Ve a la página!!"}
-            </motion.a>
-          </div>
-        </div>
-
         {/* SEIS */}
-
-        <div className="galeria">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="imagen"
-          >
-            <div className="imagen-zoom">
-              <motion.img
-                initial={{ scale: 1.2 }}
-                whileInView={{
-                  scale: 1,
-                  transition: { duration: 3, ease: [1, 1, 1, 1] },
-                }}
-                viewport={{ once: true }}
-                src={calculadora}
-              />
-            </div>
-          </motion.div>
-
-          <div className="texto bg-light">
-            <motion.h3
-              viewport={{ once: true }}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.5, delay: 0.2 },
-              }}
-            >
-              Calculator
-            </motion.h3>
-            <motion.div
-              className="line mt-1 mb-3"
-              viewport={{ once: true }}
-              initial={{ width: 0 }}
-              whileInView={{
-                width: "10%",
-                transition: { duration: 1, delay: 0.4 },
-              }}
-            >
-              {" "}
-            </motion.div>
-            <motion.p
-              viewport={{ once: true }}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.5, delay: 0.3 },
-              }}
-            >
-              {lengua ? (
-                <p>
-                  Front-End mentor challenge, where I made a fully functional
-                  calculator, only with React.js, with 3 color themes and all
-                  possible operations.
-                </p>
-              ) : (
-                <p>
-                  Desafio de Front-End mentor, donde realicé una calculadora
-                  totalmente funcional, solo con React.js, con 3 temas de
-                  colores y todas las operaciones posibles.
-                </p>
-              )}
-            </motion.p>
-
-            <motion.a
-              href="#contacto"
-              viewport={{ once: true }}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.5, delay: 0.7 },
-              }}
-              className="consultar"
-            >
-              {lengua ? "Go to the page!!" : "Ve a la página!!"}
-            </motion.a>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -9,7 +9,6 @@ import Tailwind from "../image/tailwind.png";
 import motionIcon from "../image/framer-motion.webp";
 import FormikIcon from "../image/Formik.png";
 import gitItcon from "../image/git.png";
-import responsive from "../image/responsive.png";
 import axiosIcon from "../image/axios.png";
 import { motion } from "framer-motion";
 import { Tooltip as ReactTooltip } from "react-tooltip";
@@ -37,25 +36,29 @@ function Skills({ lengua }) {
       </motion.div>
       <div className="container-skills">
         <div className="skills-left">
-          <h4>Front-End</h4>
-          <motion.div
-            className="m-auto mb-3 line"
-            viewport={{ once: true }}
-            initial={{ width: 0 }}
-            whileInView={{ width: "7%", transition: { duration: 1 } }}
-          >
-            {" "}
-          </motion.div>
+          <div></div>
           <div className="skills">
+            <div>
+              <h4>{lengua ? "Languages" : "Lenguajes"} :</h4>
+              <motion.div
+                className=" m-0 m-auto mb-2 line"
+                viewport={{ once: true }}
+                initial={{ width: 0 }}
+                whileInView={{ width: "10%", transition: { duration: 1 } }}
+              ></motion.div>
+            </div>
+
             <div className="skill">
               <motion.img
                 data-tooltip-id="html"
-                data-tooltip-content="HTML"
+                data-tooltip-content={
+                  lengua ? "HTML | Advanced" : " HTML | Avanzado"
+                }
                 viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ scale: 0, opacity: 0 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
+                  scale: 1,
                   transition: { duration: 0.5, delay: 0 },
                 }}
                 whileHover={{ scale: 1.1 }}
@@ -65,51 +68,32 @@ function Skills({ lengua }) {
 
               <motion.img
                 data-tooltip-id="css"
-                data-tooltip-content="CSS"
+                data-tooltip-content={
+                  lengua ? "CSS | Advanced" : " CSS | Avanzado"
+                }
                 viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ scale: 0, opacity: 0 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
+                  scale: 1,
                   transition: { duration: 0.5, delay: 0.2 },
                 }}
                 whileHover={{ scale: 1.1 }}
                 src={Css}
               />
               <ReactTooltip id="css" variant="info" />
-            </div>
-            {/* <div className="barra-container">
-              <div className="barra">
-                <motion.div
-                  className="barra-cargada"
-                  viewport={{ once: true }}
-                  initial={{ width: 0 }}
-                  whileInView={{
-                    width: "90%",
-                    transition: { duration: 2 },
-                  }}
-                ></motion.div>
-              </div>
-              <CountUp start={0} end={90} delay={0}>
-                {({ countUpRef }) => (
-                  <p>
-                    <span ref={countUpRef}></span>
-                    <b>%</b>
-                  </p>
-                )}
-              </CountUp>
-            </div> */}
-          </div>
-          <div className="skills">
-            <div className="skill">
               <motion.img
                 data-tooltip-id="js"
-                data-tooltip-content="JavaScript"
+                data-tooltip-content={
+                  lengua
+                    ? "Javascript | Intermediate"
+                    : " Javascript | Intermedio"
+                }
                 viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ scale: 0, opacity: 0 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
+                  scale: 1,
                   transition: { duration: 0.5, delay: 0.4 },
                 }}
                 whileHover={{ scale: 1.1 }}
@@ -117,105 +101,115 @@ function Skills({ lengua }) {
               />
               <ReactTooltip id="js" className="bg-warning" />
             </div>
-            {/* <div className="barra-container">
-              <div className="barra">
-                <motion.div
-                  className="barra-cargada"
-                  viewport={{ once: true }}
-                  initial={{ width: 0 }}
-                  whileInView={{
-                    width: "80%",
-                    transition: { duration: 2, delay: 0 },
-                  }}
-                ></motion.div>
-              </div>
-              <CountUp start={0} end={80} delay={0}>
-                {({ countUpRef }) => (
-                  <p>
-                    <span ref={countUpRef}></span>
-                    <b>%</b>
-                  </p>
-                )}
-              </CountUp>
-            </div> */}
           </div>
+
+          {/* FRAMEWORK */}
+
           <div className="skills">
+            <div>
+              <h4>Framework:</h4>
+              <motion.div
+                className=" m-0 m-auto mb-2 line"
+                viewport={{ once: true }}
+                initial={{ width: 0 }}
+                whileInView={{ width: "10%", transition: { duration: 1 } }}
+              ></motion.div>
+            </div>
             <div className="skill">
               <motion.img
                 data-tooltip-id="react"
-                data-tooltip-content="React"
+                data-tooltip-content={
+                  lengua ? "React | Intermediate" : " React | Intermedio"
+                }
                 viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ scale: 0, opacity: 0 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.5, delay: 0.6 },
+                  scale: 1,
+                  transition: { duration: 0.5, delay: 0 },
                 }}
                 whileHover={{ scale: 1.1 }}
                 src={ReactIcon}
               />
               <ReactTooltip id="react" className="bg-info" />
             </div>
-            {/* <div className="barra-container">
-              <div className="barra">
-                <motion.div
-                  className="barra-cargada"
-                  viewport={{ once: true }}
-                  initial={{ width: 0 }}
-                  whileInView={{
-                    width: "80%",
-                    transition: { duration: 2, delay: 0 },
-                  }}
-                ></motion.div>
-              </div>
-              <CountUp start={0} end={80} delay={0}>
-                {({ countUpRef }) => (
-                  <p>
-                    <span ref={countUpRef}></span>
-                    <b>%</b>
-                  </p>
-                )}
-              </CountUp>
-            </div> */}
           </div>
-        </div>
-        {/* //corte */}{" "}
-        <div className="skills-right">
-          <h4>{lengua ? "Others" : "Otras"}</h4>
-          <motion.div
-            className="m-auto mb-3 line"
-            viewport={{ once: true }}
-            initial={{ width: 0 }}
-            whileInView={{ width: "7%", transition: { duration: 1 } }}
-          >
-            {" "}
-          </motion.div>
+
+          {/* Preprocessors */}
+
           <div className="skills">
             <div>
+              <h4>{lengua ? "Preprocessors" : "Preprocesadores"} :</h4>
+              <motion.div
+                className=" m-0 m-auto mb-2 line"
+                viewport={{ once: true }}
+                initial={{ width: 0 }}
+                whileInView={{ width: "10%", transition: { duration: 1 } }}
+              ></motion.div>
+            </div>
+            <div className="skill">
               <ReactTooltip id="sass" className="bg-sass" />
               <motion.img
                 data-tooltip-id="sass"
-                data-tooltip-content="Sass"
+                data-tooltip-content={
+                  lengua ? "SASS | Advanced" : " SASS | Avanzado"
+                }
                 viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ scale: 0, opacity: 0 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
+                  scale: 1,
                   transition: { duration: 0.5, delay: 0 },
                 }}
                 whileHover={{ scale: 1.1 }}
                 src={Sass}
               />
+            </div>
+          </div>
+        </div>
+        {/* //corte */}{" "}
+        <div className="skills-right">
+          {/* LIBRERIAS */}
+
+          <div className="skills">
+            <div>
+              <h4>{lengua ? "Libraries" : "Librerías"}:</h4>
+              <motion.div
+                className=" m-0 m-auto mb-2 line"
+                viewport={{ once: true }}
+                initial={{ width: 0 }}
+                whileInView={{ width: "10%", transition: { duration: 1 } }}
+              ></motion.div>
+            </div>
+            <div className="skill">
+              <ReactTooltip id="axios" className="bg-primary" />
+              <motion.img
+                data-tooltip-id="axios"
+                data-tooltip-content={
+                  lengua ? "Axios | Intermediate" : " Axios | Intermedio"
+                }
+                viewport={{ once: true }}
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                  transition: { duration: 0.5, delay: 0 },
+                }}
+                whileHover={{ scale: 1.1 }}
+                src={axiosIcon}
+              />
               <ReactTooltip id="bootstrap" className="bg-bootstrap" />
               <motion.img
                 data-tooltip-id="bootstrap"
-                data-tooltip-content="Bootstrap"
+                data-tooltip-content={
+                  lengua ? "Bootstrap | Advanced" : " Bootstrap | Avanzado"
+                }
                 viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ scale: 0, opacity: 0 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.5, delay: 0 },
+                  scale: 1,
+                  transition: { duration: 0.5, delay: 0.2 },
                 }}
                 whileHover={{ scale: 1.1 }}
                 src={Bootstrap}
@@ -223,29 +217,33 @@ function Skills({ lengua }) {
               <ReactTooltip id="Tailwind" className="bg-tailwind" />
               <motion.img
                 data-tooltip-id="Tailwind"
-                data-tooltip-content="Tailwind"
+                data-tooltip-content={
+                  lengua ? "Tailwind | Intermediate" : " Tailwind | Intermedio"
+                }
                 viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ scale: 0, opacity: 0 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.5, delay: 0.2 },
+                  scale: 1,
+                  transition: { duration: 0.5, delay: 0.4 },
                 }}
                 whileHover={{ scale: 1.1 }}
                 src={Tailwind}
               />
-            </div>
-            <div>
               <ReactTooltip id="framermotion" className="bg-motion" />
               <motion.img
                 data-tooltip-id="framermotion"
-                data-tooltip-content="Framer Motion"
+                data-tooltip-content={
+                  lengua
+                    ? "Framer Motion | Intermediate"
+                    : " Framer Motion | Intermedio"
+                }
                 viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ scale: 0, opacity: 0 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.5, delay: 0.4 },
+                  scale: 1,
+                  transition: { duration: 0.5, delay: 0.6 },
                 }}
                 whileHover={{ scale: 1.1 }}
                 src={motionIcon}
@@ -253,75 +251,51 @@ function Skills({ lengua }) {
               <ReactTooltip id="Formik" className="bg-primary" />
               <motion.img
                 data-tooltip-id="Formik"
-                data-tooltip-content="Formik"
+                data-tooltip-content={
+                  lengua ? "Formik | Intermediate" : " Formik | Intermedio"
+                }
                 viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ scale: 0, opacity: 0 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.5, delay: 0.6 },
+                  scale: 1,
+                  transition: { duration: 0.5, delay: 0.8 },
                 }}
                 whileHover={{ scale: 1.1 }}
                 src={FormikIcon}
               />
-              <ReactTooltip id="git" className="bg-danger" />
+            </div>
+          </div>
+
+          {/* GIT */}
+
+          <div className="skills">
+            <div className="title">
+              <h4>{lengua ? "Control Version" : "Control de Versión"}:</h4>
+              <motion.div
+                className=" m-0 m-auto mb-2 line"
+                viewport={{ once: true }}
+                initial={{ width: 0 }}
+                whileInView={{ width: "10%", transition: { duration: 1 } }}
+              ></motion.div>
+            </div>
+            <div className="skill">
               <motion.img
                 data-tooltip-id="git"
-                data-tooltip-content="Git"
+                data-tooltip-content={
+                  lengua ? "GIT | Intermediate" : " GIT | Intermedio"
+                }
                 viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
+                initial={{ scale: 0, opacity: 0 }}
                 whileInView={{
                   opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.5, delay: 0.6 },
+                  scale: 1,
+                  transition: { duration: 0.5, delay: 0 },
                 }}
                 whileHover={{ scale: 1.1 }}
                 src={gitItcon}
               />
-            </div>
-            <div>
-              <ReactTooltip id="responsive" className="bg-success" />
-              <motion.img
-                data-tooltip-id="responsive"
-                data-tooltip-content="Diseño Responsive"
-                viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.5, delay: 0.6 },
-                }}
-                whileHover={{ scale: 1.1 }}
-                src={responsive}
-              />
-              <ReactTooltip id="axios" className="bg-primary" />
-              <motion.img
-                data-tooltip-id="axios"
-                data-tooltip-content="Axios"
-                viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.5, delay: 0.6 },
-                }}
-                whileHover={{ scale: 1.1 }}
-                src={axiosIcon}
-              />
-              <ReactTooltip id="hooks" className="bg-info" />
-              <motion.img
-                data-tooltip-id="hooks"
-                data-tooltip-content="React Hooks"
-                viewport={{ once: true }}
-                initial={{ x: 100, opacity: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 0.5, delay: 0.6 },
-                }}
-                whileHover={{ scale: 1.1 }}
-                src={ReactIcon}
-              />
+              <ReactTooltip id="git" className="bg-danger" />
             </div>
           </div>
         </div>
