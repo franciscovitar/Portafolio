@@ -5,12 +5,19 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-attachment: fixed;
         height: 100vh;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: space-around;
+
+        // @supports (-webkit-touch-callout: none) {
+        //     background-attachment: scroll;
+        // }
+
+        // @supports not (-webkit-touch-callout: none) {
+        //     background-attachment: fixed;
+        // }
 
         @media(max-height: 650px) {
             height: 1000px;
